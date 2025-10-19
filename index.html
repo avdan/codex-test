@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vibe Coding Workshop | DC Conference Bangkok</title>
+  <style>
+    :root {
+      --primary: #6c63ff;
+      --accent: #ff6584;
+      --bg: #0f172a;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top left, rgba(108, 99, 255, 0.25), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(255, 101, 132, 0.25), transparent 45%),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 4rem 5vw 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      margin: 0 0 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    header p {
+      margin: 0 auto;
+      max-width: 40rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(108, 99, 255, 0.15);
+      border: 1px solid rgba(108, 99, 255, 0.4);
+      border-radius: 999px;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    main {
+      flex: 1;
+      padding: 0 5vw 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 18px 35px -20px rgba(12, 8, 36, 0.65);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      color: var(--accent);
+      font-size: 1.5rem;
+      letter-spacing: 0.04em;
+    }
+
+    .card p {
+      margin: 0;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .schedule {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .session {
+      background: rgba(108, 99, 255, 0.1);
+      border-radius: 0.85rem;
+      padding: 1.2rem 1.4rem;
+      border: 1px solid rgba(108, 99, 255, 0.25);
+      display: grid;
+      gap: 0.25rem;
+    }
+
+    .session time {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .cta {
+      text-align: center;
+      padding: 3rem 5vw 4rem;
+      background: linear-gradient(135deg, rgba(108, 99, 255, 0.4), rgba(255, 101, 132, 0.35));
+    }
+
+    .cta h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      margin: 0 auto 2rem;
+      max-width: 36rem;
+      color: rgba(15, 23, 42, 0.85);
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    .cta a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.8rem;
+      border-radius: 999px;
+      font-weight: 600;
+      background: var(--bg);
+      color: var(--text);
+      text-decoration: none;
+      box-shadow: 0 12px 25px -15px rgba(12, 8, 36, 0.9);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 30px -18px rgba(12, 8, 36, 0.75);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem 3rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 3rem 1.5rem 1.5rem;
+      }
+
+      main {
+        padding: 0 1.5rem 3rem;
+      }
+
+      .cta {
+        padding: 3rem 1.5rem 3.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="badge">23 October 2024 · Bangkok · DC Conference</div>
+    <h1>Vibe Coding Workshop</h1>
+    <p>
+      Join a future-forward coding experience designed for creatives, technologists, and community builders. Dive into
+      immersive sessions that mix hands-on experimentation with the rhythm of Bangkok's innovation scene.
+    </p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Why You'll Love It</h2>
+      <p>
+        Tap into collaborative energy, learn from DC's leading vibe architects, and turn code into expressive art. Expect
+        live demos, interactive labs, and the chance to ship a mini project before the day wraps.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Where & When</h2>
+      <p>
+        <strong>Venue:</strong> DC Conference Hub, Bangkok<br />
+        <strong>Date:</strong> Wednesday, 23 October 2024<br />
+        <strong>Time:</strong> 10:00 – 18:30 ICT
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Program Flow</h2>
+      <div class="schedule">
+        <div class="session">
+          <time>10:00</time>
+          <div>Doors open, vibe check-in, and welcome coffee.</div>
+        </div>
+        <div class="session">
+          <time>10:30</time>
+          <div>Keynote: Building immersive experiences with creative code.</div>
+        </div>
+        <div class="session">
+          <time>12:00</time>
+          <div>Guided lab: Designing sonic-responsive interfaces.</div>
+        </div>
+        <div class="session">
+          <time>14:00</time>
+          <div>Collaboration circles: Pair up and prototype live.</div>
+        </div>
+        <div class="session">
+          <time>16:30</time>
+          <div>Showcase: Drop your demo, gather feedback, and level up.</div>
+        </div>
+        <div class="session">
+          <time>18:00</time>
+          <div>Sunset mixer with DJs, creators, and the DC crew.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="cta">
+    <h2>Reserve Your Spot</h2>
+    <p>
+      Spaces are limited to keep the energy high and collaborative. Secure your badge now and be part of the vibe coding
+      wave at DC Conference Bangkok.
+    </p>
+    <a href="#">Save My Seat</a>
+  </section>
+
+  <footer>
+    Powered by DC Conference Bangkok · Crafted for coders who move with the beat.
+  </footer>
+</body>
+</html>
